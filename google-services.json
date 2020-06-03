@@ -1,0 +1,275 @@
+{
+  "project_info": {
+    "project_number": "219067653610",
+    "firebase_url": "https://voter-id-verification.firebaseio.com",
+    "project_id": "voter-id-verification",
+    "storage_bucket": "voter-id-verification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219067653610:android:31d81dd814925763632693",
+        "android_client_info": {
+          "package_name": "com.codingwithmitch.firestorechatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219067653610-35v0lrt5oha7fg3fb376vtma13pb3u2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKXkk1Uv0t3b4CB1epzHD1G6POHHvnPCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219067653610-35v0lrt5oha7fg3fb376vtma13pb3u2v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219067653610:android:aae18eb41b17651c632693",
+        "android_client_info": {
+          "package_name": "com.lfb.desktopbrowser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219067653610-35v0lrt5oha7fg3fb376vtma13pb3u2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKXkk1Uv0t3b4CB1epzHD1G6POHHvnPCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219067653610-35v0lrt5oha7fg3fb376vtma13pb3u2v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219067653610:android:62aa7903edaa6008632693",
+        "android_client_info": {
+          "package_name": "com.pandasdroid.agoravideocall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219067653610-35v0lrt5oha7fg3fb376vtma13pb3u2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKXkk1Uv0t3b4CB1epzHD1G6POHHvnPCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219067653610-35v0lrt5oha7fg3fb376vtma13pb3u2v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219067653610:android:7278336ad99778d3632693",
+        "android_client_info": {
+          "package_name": "com.pandasdroid.ds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219067653610-s366rcaih986tntsktuheeco1m2b3smf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pandasdroid.ds",
+            "certificate_hash": "93506d6addce512593e085f4db49f5cde0c1184d"
+          }
+        },
+        {
+          "client_id": "219067653610-35v0lrt5oha7fg3fb376vtma13pb3u2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKXkk1Uv0t3b4CB1epzHD1G6POHHvnPCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219067653610-35v0lrt5oha7fg3fb376vtma13pb3u2v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219067653610:android:4b7c52dcf513ee1e632693",
+        "android_client_info": {
+          "package_name": "com.pandasdroid.scanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219067653610-35v0lrt5oha7fg3fb376vtma13pb3u2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKXkk1Uv0t3b4CB1epzHD1G6POHHvnPCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219067653610-35v0lrt5oha7fg3fb376vtma13pb3u2v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219067653610:android:703fbd68274ae3b4632693",
+        "android_client_info": {
+          "package_name": "com.pandasdroid.vl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219067653610-kl0cbp7lfv0pcon2o9lsbc6004dq4pk1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pandasdroid.vl",
+            "certificate_hash": "93506d6addce512593e085f4db49f5cde0c1184d"
+          }
+        },
+        {
+          "client_id": "219067653610-35v0lrt5oha7fg3fb376vtma13pb3u2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKXkk1Uv0t3b4CB1epzHD1G6POHHvnPCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219067653610-35v0lrt5oha7fg3fb376vtma13pb3u2v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219067653610:android:fde2e787d0618741632693",
+        "android_client_info": {
+          "package_name": "com.pshkrh.pkchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219067653610-5rkmue2jf5efcanm7j5jl7a9aa06092h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pshkrh.pkchat",
+            "certificate_hash": "93506d6addce512593e085f4db49f5cde0c1184d"
+          }
+        },
+        {
+          "client_id": "219067653610-35v0lrt5oha7fg3fb376vtma13pb3u2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKXkk1Uv0t3b4CB1epzHD1G6POHHvnPCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219067653610-35v0lrt5oha7fg3fb376vtma13pb3u2v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219067653610:android:72f9e9c09b333668632693",
+        "android_client_info": {
+          "package_name": "com.virmana.status_app_all"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219067653610-j134qqmtl13eh82246b8jkkp0d96vh4m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.virmana.status_app_all",
+            "certificate_hash": "93506d6addce512593e085f4db49f5cde0c1184d"
+          }
+        },
+        {
+          "client_id": "219067653610-35v0lrt5oha7fg3fb376vtma13pb3u2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKXkk1Uv0t3b4CB1epzHD1G6POHHvnPCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219067653610-35v0lrt5oha7fg3fb376vtma13pb3u2v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

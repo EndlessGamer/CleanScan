@@ -1,0 +1,150 @@
+package com.pandasdroid.scanner.fileView;
+
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Environment;
+import android.support.annotation.NonNull;
+import android.support.v7.view.ActionMode;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.pandasdroid.scanner.R;
+import com.pandasdroid.scanner.persistance.Document;
+import com.pandasdroid.scanner.persistance.DocumentViewModel;
+import com.pandasdroid.scanner.utils.DialogUtil;
+import com.pandasdroid.scanner.utils.DialogUtilCallback;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+public class FLAdapter extends RecyclerView.Adapter<FLViewHolder> {
+
+    final Context context;
+    protected ActionMode mActionMode;
+
+    public boolean multiSelect = false;
+    private List<Document> documentList = new ArrayList<>();
+    public List<Document> selectedItems = new ArrayList<>();
+
+    private DocumentViewModel viewModel;
+
+    private ActionMode.Callback actionModeCallbacks = new ActionMode.Callback() {
+
+        @Override
+        public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+            multiSelect = true;
+            return true;
+        }
+
+        @Override
+        public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+
+            if( selectedItems.size() == 0 || selectedItems.size() == 1 ){
+                MenuInflater inflater = mode.getMenuInflater();
+                menu.clear();
+                inflater.inflate(R.menu.single_select_menu, menu);
+                mode.setTitle( "1 Selected" );
+                return true;
+
+            } else {
+                MenuInflater inflater = mode.getMenuInflater();
+                menu.clear();
+                inflater.inflate(R.menu.multi_select_menu, menu);
+                mode.setTitle( selectedItems.size() + " Selected" );
+                return true;
+            }
+
+        }
+
+        @Override
+        public boolean onActionItemClicked(final ActionMode mode, final MenuItem item) {
+
+            int itemId = item.getItemId();
+            if (itemId == R.id.menu_delete) {
+                for (Document documentItem : selectedItems) {
+
+                    final String baseDirectory = context.getString(R.string.base_storage_path);
+                    final File sd = Environment.getExternalStorageDirectory();
+
+                    File toDelete = new File(sd, baseDirectory + documentItem.getPath());
+                    toDelete.delete();
+                    viewModel.deleteDocument(documentItem);
+                }
+
+                mode.finish();
+                return true;
+            } else if (itemId == R.id.menu_edit) {
+                final Document docToRename = selectedItems.get(0);
+                DialogUtil.askUserFilaname(context, docToRename.getName(), docToRename.getCategory(), new DialogUtilCallback() {
+
+                    @Override
+                    public void onSave(String textValue, String category) {
+
+                        docToRename.setName(textValue);
+                        docToRename.setCategory(category);
+                        viewModel.updateDocument(docToRename);
+
+                        Toast toast = Toast.makeText(context, "Renamed to " + textValue, Toast.LENGTH_SHORT);
+                        toast.show();
+
+                        notifyDataSetChanged();
+
+                    }
+                });
+
+                mode.finish();
+                return true;
+            }
+            return false;
+
+        }
+
+        @Override
+        public void onDestroyActionMode(ActionMode mode) {
+            multiSelect = false;
+            selectedItems.clear();
+            notifyDataSetChanged();
+        }
+    };
+
+    public FLAdapter( DocumentViewModel viewModel, Context context ){
+        this.viewModel = viewModel;
+        this.context = context;
+    }
+
+    public void setData(List<Document> documents){
+        this.documentList.clear();
+        this.documentList.addAll( documents );
+        notifyDataSetChanged();
+    }
+
+    @NonNull
+    @Override
+    public FLViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+
+        LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext());
+        View listItem = layoutInflater.inflate( R.layout.file_item_view, viewGroup, false );
+        FLViewHolder viewHolder = new FLViewHolder(listItem, actionModeCallbacks, this );
+
+        return viewHolder;
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull FLViewHolder viewHolder, int i) {
+            viewHolder.setDocument( this.documentList.get(i) );
+    }
+
+    @Override
+    public int getItemCount() {
+        return this.documentList.size();
+    }
+
+}
